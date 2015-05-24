@@ -26,7 +26,7 @@ module AwesomeEvents
     # Record auto-convert to this zone.
     # Run "rake -D time" for a list of tasks for finding time zone
     # names. Default is UTC.
-    # config.time_zone = 'Central Time (US & Canada)'
+    config.time_zone = 'Tokyo'
 
     # The default locale is :en and all translations from
     # config/locales/*.rb,yml are auto loaded.
