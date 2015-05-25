@@ -69,6 +69,8 @@ group :development, :test do
 
   gem 'pry-rails'
   gem 'pry-byebug'
+
+  gem 'awesome_print', require: 'ap'
 end
 
 group :development do
@@ -81,8 +83,6 @@ group :development do
   gem 'hirb-unicode'
 
   gem 'rails-erd'
-
-  gem 'awesome_print', require: 'ap'
 end
 
 group :test do
