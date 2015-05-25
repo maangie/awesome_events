@@ -1,7 +1,7 @@
 class Event < ActiveRecord::Base
   STRFTIME_FORMAT = '%Y/%m/%d %H:%M'
 
-  # mount_uploader :event_image, EventImageUploader
+  mount_uploader :event_image, EventImageUploader
   has_many :tickets, dependent: :destroy
   belongs_to :owner, class_name: 'User'
 
