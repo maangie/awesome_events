@@ -55,13 +55,9 @@
       %>
     <% elsif logged_in? %>
       <%= button_tag_for_new_event_ticket '#createTicket' %>
-      <% if false %>
-        <%= render 'create_ticket' %>
-      <% end %>
+      <%= render 'create_ticket' %>
     <% else %>
-      <% if false %>
-        <%= link_to_new_event_ticket %>
-      <% end %>
+      <%= link_to_new_event_ticket %>
     <% end %>
 
     <hr>
@@ -71,22 +67,20 @@
 
       <div class="panel-body">
         <ul class="list-unstyled">
-          <% if false %>
-            <% @tickets.each do |ticket| %>
-              <% if ticket.user %>
-                <li>
-                  <%= link_to url_for_twitter ticket.user do %>
-                    <%=
-                    image_tag ticket.user.image_url, width: 20, height: 20
-                    %>
-                    <%= "@#{ticket.user.nickname}" %>
-                  <% end %>
+          <% @tickets.each do |ticket| %>
+            <% if ticket.user %>
+              <li>
+                <%= link_to url_for_twitter ticket.user do %>
+                  <%=
+                  image_tag ticket.user.image_url, width: 20, height: 20
+                  %>
+                  <%= "@#{ticket.user.nickname}" %>
+                <% end %>
 
-                  <%= ticket.comment %>
-                </li>
-              <% else %>
-                退会したユーザです
-              <% end %>
+                <%= ticket.comment %>
+              </li>
+            <% else %>
+              退会したユーザです
             <% end %>
           <% end %>
         </ul>
