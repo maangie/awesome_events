@@ -18,6 +18,20 @@
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
+  config.before :all, type: :feature do
+    OmniAuth.config.test_mode = true
+    OmniAuth.config.mock_auth[:twitter] = OmniAuth::AuthHash.new(
+      {
+        provider: 'twitter',
+        uid: '1234',
+        info: {
+          nickname: 'netwillnet',
+          image: 'http://example.com/netwillnet.jpg'
+        }
+      }
+    )
+  end
+
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
   # assertions if you prefer.
