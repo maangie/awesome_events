@@ -32,6 +32,11 @@ module AwesomeEvents
     # config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales',
     # '*.{rb,yml}').to_s]
+    config.i18n.load_path += Dir[
+      Pathname(CarrierWave.method(:root).source_location[0]).dirname
+      .join('carrierwave', 'locale', '*.{rb,yml}')
+    ]
+
     config.i18n.default_locale = :ja
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
