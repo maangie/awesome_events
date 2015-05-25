@@ -82,3 +82,7 @@ group :development do
 
   gem 'awesome_print', require: 'ap'
 end
+
+group :test do
+  gem 'shoulda-matchers'
+end
