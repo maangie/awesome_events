@@ -88,7 +88,7 @@ group :development do
 end
 
 group :test do
-  gem 'shoulda-matchers'
+  gem 'shoulda-matchers', require: false
   gem 'capybara'
   gem 'poltergeist'
   gem 'database_cleaner'
