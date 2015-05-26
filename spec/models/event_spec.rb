@@ -28,5 +28,12 @@ RSpec.describe Event, type: :model do
         expect(event.rails?).to eq true
       end
     end
+
+    context '#name が "Ruby 勉強会" のとき' do
+      it 'false を返すこと' do
+        event = create(:event, name: 'Ruby 勉強会')
+        expect(event.rails?).to eq false
+      end
+    end
   end
 end
