@@ -71,6 +71,8 @@ group :development, :test do
   gem 'pry-byebug'
 
   gem 'awesome_print', require: 'ap'
+
+  gem 'spring-commands-rspec'
 end
 
 group :development do
