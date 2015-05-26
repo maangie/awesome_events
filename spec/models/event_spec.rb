@@ -20,4 +20,13 @@ RSpec.describe Event, type: :model do
       it { should be_truthy }
     end
   end
+
+  describe '#rails?' do
+    context '#name が "Rails 勉強会" のとき' do
+      it 'true を返すこと' do
+        event = create(:event, name: 'Rails 勉強会')
+        expect(event.rails?).to eq true
+      end
+    end
+  end
 end
