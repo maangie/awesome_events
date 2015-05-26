@@ -11,5 +11,26 @@ require 'rails_helper'
 #   end
 # end
 RSpec.describe EventsHelper, type: :helper do
-  pending "add some examples to (or delete) #{__FILE__}"
+  describe 'datetime_select_now は' do
+    let (:now) { Time.zone.now }
+    let (:form) { double('form_for') }
+
+    before do
+      allow(form).to receive(:datetime_select).and_return :column
+    end
+
+    it 'カラム名を受け取る' do
+      expect(helper.datetime_select_now(form, :column)).to eq :column
+    end
+  end
+
+  pending 'submit_tag_with_label'
+  pending 'button_tag_with_label'
+  pending 'link_to_edit_event'
+  pending 'link_to_delete_event'
+  pending 'button_tag_for_new_event_ticket'
+  pending 'link_to_new_event_ticket'
+  pending 'modal_tag'
+  pending 'close_button_tag'
+  pending 'build_ticket_form_for'
 end
