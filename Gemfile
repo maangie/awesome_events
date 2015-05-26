@@ -92,4 +92,5 @@ group :test do
   gem 'capybara'
   gem 'poltergeist'
   gem 'database_cleaner'
+  gem 'coveralls', require: false
 end

@@ -20,6 +20,9 @@ public/uploads
 !/log/.keep
 /tmp
 
+# Ignore secret files.
+.coveralls.yml
+
 # Ignore other unneeded files.
 doc/
 *.swp
