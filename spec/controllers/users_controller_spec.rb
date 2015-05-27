@@ -1,17 +1,19 @@
 require 'rails_helper'
 
 RSpec.describe UsersController, type: :controller do
-  context 'ログインユーザが retire にアクセスしたとき' do
-    before do
-      session[:user_id] = create(:user).id
-      get :retire
+  context 'ログインユーザ' do
+    before { session[:user_id] = create(:user).id }
+
+    context 'retire にアクセスしたとき render する' do
+      before { get :retire }
+      it { expect(response).to render_template :retire }
     end
 
-    it 'render される' do
-      expect(response).to render_template :retire
+    context '退会するとユーザの数がひとつ減る' do
+      let(:request) { delete :destroy }
+      it { expect { request }.to change(User, :count).by -1 }
     end
   end
 
-  pending '未ログインユーザが retire にアクセスしたとき'
-  pending 'destroy'
+  pending '未ログインユーザ'
 end
