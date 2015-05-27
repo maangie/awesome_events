@@ -85,6 +85,8 @@ group :development do
   gem 'hirb-unicode'
 
   gem 'rails-erd'
+
+  gem 'rails_best_practices'
 end
 
 group :test do
