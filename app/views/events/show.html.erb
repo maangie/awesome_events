@@ -55,7 +55,7 @@
       %>
     <% elsif logged_in? %>
       <%= button_tag_for_new_event_ticket '#createTicket' %>
-      <%= render 'create_ticket' %>
+      <%= render 'create_ticket', event: @event %>
     <% else %>
       <%= link_to_new_event_ticket %>
     <% end %>

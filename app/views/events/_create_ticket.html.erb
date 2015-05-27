@@ -7,7 +7,7 @@
         <h4 class="modal-title" id="dialogHeader">参加コメント</h4>
       </div>
 
-      <%= build_ticket_form_for @event do |f| %>
+      <%= build_ticket_form_for event do |f| %>
         <div class="modal-body">
           <%= f.text_field :comment, class: 'form-control' %>
         </div>
