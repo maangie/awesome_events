@@ -20,8 +20,9 @@ public/uploads
 !/log/.keep
 /tmp
 
-# Ignore secret files.
+# Ignore coverall files.
 .coveralls.yml
+/coverage
 
 # Ignore other unneeded files.
 doc/
